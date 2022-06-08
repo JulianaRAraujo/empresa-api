@@ -1,0 +1,3 @@
+br/com/juba/pos/model/Empresa.class
+br/com/juba/pos/resource/EmpresaResource.class
+br/com/juba/pos/model/Endereco.class
