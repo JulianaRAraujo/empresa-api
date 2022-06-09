@@ -22,6 +22,18 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!-- SET Tomcat Maven Plugin 
+            <plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					 Use tomcat9 Deploy app here server Values in tags and step 2 maven In the configuration file id Value consistent
+					<server>repo1</server>
+					<update>true</update>
+				</configuration>
+			</plugin> -->
         </plugins>
     </build>
 

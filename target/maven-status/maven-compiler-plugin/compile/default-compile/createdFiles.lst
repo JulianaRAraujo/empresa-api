@@ -1,3 +1,5 @@
 br/com/juba/pos/model/Empresa.class
+br/com/juba/pos/service/EmpresaService.class
+br/com/juba/pos/model/Telefone.class
 br/com/juba/pos/resource/EmpresaResource.class
 br/com/juba/pos/model/Endereco.class

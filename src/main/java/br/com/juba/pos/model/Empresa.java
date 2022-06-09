@@ -6,6 +6,7 @@ public class Empresa {
     private UUID id;
     private String nome;
     private Endereco endereco;
+    private Telefone telefone;
     
     public UUID getId() {
         return id;
@@ -25,6 +26,11 @@ public class Empresa {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
+    public Telefone getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
+    }
 
 }
