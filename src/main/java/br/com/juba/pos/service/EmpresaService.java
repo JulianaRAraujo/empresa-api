@@ -2,9 +2,12 @@ package br.com.juba.pos.service;
 
 import java.util.UUID;
 
+import org.glassfish.jersey.process.internal.RequestScoped;
+
 import br.com.juba.pos.model.Empresa;
 import br.com.juba.pos.model.Endereco;
 
+@RequestScoped
 public class EmpresaService {
     public Empresa criarEmpresa() {
         Empresa empresa = new Empresa();

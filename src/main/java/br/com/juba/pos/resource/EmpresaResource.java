@@ -9,6 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.glassfish.jersey.process.internal.RequestScoped;
+
 import br.com.juba.pos.model.Empresa;
 import br.com.juba.pos.model.Endereco;
 import br.com.juba.pos.model.Telefone;
@@ -18,9 +20,10 @@ import br.com.juba.pos.service.EmpresaService;
  * Root resource (exposed at "empresa" path)
  */
 @Path("empresa")
+@RequestScoped
 public class EmpresaResource {
     
-    private EmpresaService empresaService = new EmpresaService();
+    private EmpresaService service = new EmpresaService();
 
     /**
      * Metodo que retorna os dados da empresa
@@ -31,7 +34,7 @@ public class EmpresaResource {
 
     public Response get() {
     
-        Empresa empresa = empresaService.criarEmpresa();
+        Empresa empresa = service.criarEmpresa();
        
         return Response.ok(empresa).build();
     }    
@@ -73,6 +76,5 @@ public class EmpresaResource {
 		return Response.ok(end).build();
 
    }
-
-   
+  
 }
