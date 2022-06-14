@@ -21,6 +21,7 @@ import br.com.juba.pos.service.EmpresaService;
  */
 @Path("empresa")
 @RequestScoped
+
 public class EmpresaResource {
     
     private EmpresaService service = new EmpresaService();
@@ -39,42 +40,44 @@ public class EmpresaResource {
         return Response.ok(empresa).build();
     }    
 
+}
+
+
+// APENAS COMENTARIOS ABAIXO
+
     /**
-     * Method handling HTTP GET requests. The returned object will be sent
-     * to the client as "text/plain" media type.
-     *
+     * METODO DE MOCK PARA TESTE.
      * @return String that will be returned as a text/plain response.
      */
-    @GET
-    @Path("mock")
-    @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+    // @GET
+    // @Path("mock")
+    // @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
 
-    public Response getMock() {
+    // public Response getMock() {
     
-        Empresa empresa = new Empresa();
-        empresa.setId(UUID.randomUUID());
-        empresa.setNome("Minha Empresa");
-        Endereco endereco = new Endereco();
-        endereco.setBairro("Limoeiro");
-        endereco.setCidade("Bauru");
-        endereco.setEstado("São Paulo");
-        endereco.setLogradouro("Rua do Jaú");
-        endereco.setNumero(10);
-        Telefone telefone = new Telefone();
-        telefone.setDdd(61);
-        telefone.setNumero(998368149);
-        empresa.setEndereco(endereco);
-        empresa.setTelefone(telefone);
-        return Response.ok(empresa).build();
-    }    
+    //     Empresa empresa = new Empresa();
+    //     empresa.setId(UUID.randomUUID());
+    //     empresa.setNome("Minha Empresa");
+    //     Endereco endereco = new Endereco();
+    //     endereco.setBairro("Limoeiro");
+    //     endereco.setCidade("Bauru");
+    //     endereco.setEstado("São Paulo");
+    //     endereco.setLogradouro("Rua do Jaú");
+    //     endereco.setNumero(10);
+    //     Telefone telefone = new Telefone();
+    //     telefone.setDdd(61);
+    //     telefone.setNumero(998368149);
+    //     empresa.setEndereco(endereco);
+    //     empresa.setTelefone(telefone);
+    //     return Response.ok(empresa).build();
+    // }    
 
-    @GET
-	@Path("mock/endereco")
-	public Response get(@PathParam("endereco") String bairro) {
-		Endereco end = new Endereco();
-        end.setBairro("Aguas");
-		return Response.ok(end).build();
+//     @GET
+// 	@Path("mock/endereco")
+// 	public Response get(@PathParam("endereco") String bairro) {
+// 		Endereco end = new Endereco();
+//         end.setBairro("Aguas");
+// 		return Response.ok(end).build();
 
-   }
+//    }
   
-}
