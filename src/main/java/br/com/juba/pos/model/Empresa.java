@@ -1,18 +1,16 @@
 package br.com.juba.pos.model;
 
-import java.util.UUID;
 
 public class Empresa {
-    private UUID id;
+    private long id;
     private String nome;
-    private Endereco endereco;
-    private Telefone telefone;
+    private String endereco;
     
-    public UUID getId() {
+    public long getId() {
         return id;
     }
-    public void setId(UUID id) {
-        this.id = id;
+    public void setId(long l) {
+        this.id = l;
     }
     public String getNome() {
         return nome;
@@ -20,17 +18,10 @@ public class Empresa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public Endereco getEndereco() {
+    public String getEndereco() {
         return endereco;
     }
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public Telefone getTelefone() {
-        return telefone;
-    }
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
-    }
-
 }
