@@ -1,6 +1,6 @@
 package br.com.juba.pos.model;
 
-
+//Classe empresa
 public class Empresa {
     private long id;
     private String nome;
