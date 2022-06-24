@@ -8,10 +8,8 @@ import java.sql.SQLException;
 // or you will have problems!
 
 public class LoadDriver {
-
+    // driver JDBC do MySQL
     public LoadDriver() {
-            // The newInstance() call is a work around for some
-            // broken Java implementations
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             } catch (Exception ex) {
@@ -28,7 +26,7 @@ public class LoadDriver {
             conn = DriverManager.getConnection(url, "root", "");
             return conn;
         } catch (SQLException ex) {
-            // handle any errors
+            // lidar com quaisquer erros
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());

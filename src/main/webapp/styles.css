@@ -1,0 +1,25 @@
+body{
+    background-color: #EBECEE;
+}
+h1{
+   color: #EB9B00;
+   text-align: center;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+    width: 100%;
+    height: 200px;
+   
+   
+}
+div a{
+    color:#002F52;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
